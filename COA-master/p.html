@@ -1,0 +1,307 @@
+<html>
+<head>
+<title> 
+
+</title>
+<style>
+input{
+margin:10;
+}
+.lb{
+margin-left:85;
+}
+form{
+font-size:22px;
+font-family:ui-serif;
+position:relative;
+left:350;
+
+}
+button{
+font-size:30;
+}
+.sub{
+width:80px;
+font-size:20px;
+display:inline-block;
+color:black;
+border:1px solid black;
+padding:5px;
+border-radius:10%;
+position:relative;
+left:300;
+
+}
+.sub:hover{
+background-color:#3E54AC;
+}
+
+
+</style>
+
+</head>
+<body bgcolor="#BAD7E9">
+<script>
+
+function storedata()
+{
+
+const MyTuples=[
+    [document.getElementById("sel1").value,parseInt(document.getElementById("1a").value)],
+    [document.getElementById("sel2").value,parseInt(document.getElementById("1b").value)],
+    [document.getElementById("sel3").value,parseInt(document.getElementById("1c").value)],
+    [document.getElementById("sel4").value,parseInt(document.getElementById("2a").value)],
+    [document.getElementById("sel5").value,parseInt(document.getElementById("2b").value)],
+    [document.getElementById("sel6").value,parseInt(document.getElementById("2c").value)],
+    [document.getElementById("sel7").value,parseInt(document.getElementById("3a").value)],
+    [document.getElementById("sel8").value,parseInt(document.getElementById("3b").value)],
+    [document.getElementById("sel9").value,parseInt(document.getElementById("3C").value)]
+]
+
+
+console.log(MyTuples)
+localStorage.setItem("name",MyTuples)
+
+var t1 = document.getElementById("1a").value;
+var t2 = document.getElementById("1b").value;
+var t3 = document.getElementById("1c").value;
+var t4 = document.getElementById("2a").value;
+var t5 = document.getElementById("2b").value;
+var t6 = document.getElementById("2c").value;
+var t7 = document.getElementById("3a").value;
+var t8 = document.getElementById("3b").value;
+var t9 = document.getElementById("3c").value;
+var num1 = parseInt(t1);
+var num2 = parseInt(t2);
+var num3 = parseInt(t3);
+var num4 = parseInt(t4);
+var num5 = parseInt(t5);
+var num6 = parseInt(t6);
+var num7 = parseInt(t7);
+var num8 = parseInt(t8);
+var num9 = parseInt(t9);
+var sum1 = num1 + num2 + num3;
+var sum2 = num4 + num5 + num6;
+var sum3 = num7 + num8 + num9;
+
+
+if (sum1>10 && sum2==10 && sum3==10) {
+
+alert("The first question  exceed 10.");
+}
+else if(sum2>10 && sum1==10 && sum3==10)
+{
+alert("the second question exceed 10");
+}
+else if(sum3>10 && sum1==10 && sum2==10)
+{
+alert("the third question exceed 10");
+}
+else if(sum3 > 10 && sum2 >10 && sum1==10)
+{
+alert("the second and third question exceed 10");
+}
+else if(sum1>10 && sum3>10 && sum2==10)
+{
+alert("the first andthird question exceed 10");
+}
+else if(sum1 > 10 && sum2 >10 && sum3==10)
+{
+alert("the second and third question exceed 10");
+}
+else if(sum3>10 && sum1>10 && sum2>10)
+{
+alert("the first,second,third question exceed 10");
+}
+else if(sum1<10 && sum2==10 && sum3==10)
+{
+alert(" the first question is less than 10");
+}
+else if(sum2<10 && sum1==10 && sum3==10)
+{
+alert(" the second question is less than 10");
+}
+else if(sum3<10 && sum1==10 && sum2==10)
+{
+alert(" the third question is less than 10");
+}
+else if( sum1<10 && sum2<10 && sum3==10)
+{
+alert( "the first and second questions are less than 10");
+}
+else if(sum2<10 && sum3<10 && sum1==10)
+{
+alert(" the second and third questions are less than 10");
+}
+else if(sum1<10 && sum3<10 && sum2==10)
+{
+alert(" the first and third questions are less than 10");
+}
+else if( sum1<10 && sum2<10 && sum3<10)
+{
+alert("the first ,second and third questions are less than 10");
+}
+else if(sum1==10 && sum2==10 && sum3==10){
+alert("marks entered successfully");
+
+}
+else if(sum1==10 && sum2>10 && sum3<10)
+{
+alert("sum2 grater then 10 and sum3 less then 10");
+}
+else if(sum1==10 && sum2<10 && sum3>10)
+{
+    alert("sum2 less then 10 and sum3 greater then 10");
+}
+else if(sum1<10 && sum2>10 && sum3==10)
+{
+    alert("sum1 less 10 then and sum2 greater then 10");
+}
+else if(sum1>10 && sum2<10 && sum3==10)
+{
+   alert("sum1 grater than 10 and sum2 less then 10");
+}
+else if(sum1>10 && sum2<10 && sum3>10)
+{
+    alert("sum1 grater then 10 and sum2 less then 10");
+}
+else if(sum1>10 && sum2==10 && sum3<10)
+{
+    alert("sum1 grater then 10 and sum3 less then 10");
+}
+else if(sum1<10 && sum2==10 && sum3>10)
+{
+    alert("sum1 less then10 and sum3 greater then 10");
+}
+else{
+alert("enter all marks");
+}
+}
+
+
+</script>
+<h1 align="center">Midmarks</h1>
+<br>
+<form action="mid.html" method="POST" id="marks">
+<lable>subject</lable>
+<input type="text" name="subject" size="15" ><br>
+<br>
+
+<lable>
+Ⅰ-
+a</label>
+
+<input
+ type="number" name="a" size="2" id="1a">
+<label>
+co
+</lable>
+<select id="sel1">
+<option value="c1">c1</option>
+<option value="c2">c2</option>
+<option value="c3">c3</option>
+<option value="c4">c4</option>
+<option value="c5">c5</option>
+</select>
+
+<label class="lb">b</label>
+<input type="number" name="b" size="2" id="1b">
+<lable>co</lable>
+<select id="sel2">
+<option value="c1">c1</option>
+<option value="c2">c2</option>
+<option value="c3">c3</option>
+<option value="c4">c4</option>
+<option value="c5">c5</option>
+</select>
+<label class="lb">c</label>
+<input type="number" name="c" size="2" id="1c">
+<lable>co</lable>
+<select id="sel3">
+<option value="c1">c1</option>
+<option value="c2">c2</option>
+<option value="c3">c3</option>
+<option value="c4">c4</option>
+<option value="c5">c5</option>
+</select>
+<br><br>
+
+<label>
+ Ⅱ-
+a </label><input type="number" name="a" size="2" id="2a">
+<lable>co</lable>
+<select id="sel4">
+<option value="c1">c1</option>
+<option value="c2">c2</option>
+<option value="c3">c3</option>
+<option value="c4">c4</option>
+<option value="c5">c5</option>
+</select>
+
+<label class="lb">b</label><input type="number" name="b" size="2" id="2b">
+<lable>co</lable>
+
+<select id="sel5">
+<option value="c1">c1</option>
+<option value="c2">c2</option>
+<option value="c3">c3</option>
+<option value="c4">c4</option>
+<option value="c5">c5</option>
+</select>
+
+<label class="lb">c</label><input type="number" name="c" size="2" id="2c">
+<lable>co</lable>
+<select id="sel6">
+<option value="c1">c1</option>
+<option value="c2">c2</option>
+<option value="c3">c3</option>
+<option value="c4">c4</option>
+<option value="c5">c5</option>
+</select>
+
+<br><br>
+
+<label>
+ Ⅲ-
+a </label>
+<input type="number" name="a" size="2" id="3a">
+</lable>
+<lable>co</lable>
+<select id="sel7">
+<option value="c1">c1</option>
+<option value="c2">c2</option>
+<option value="c3">c3</option>
+<option value="c4">c4</option>
+<option value="c5">c5</option>
+
+</select>
+
+<label class="lb">b</label><input type="number" name="b" size="2" id="3b">
+<lable>co</lable>
+
+<select id="sel8">
+<option value="c1">c1</option>
+<option value="c2">c2</option>
+<option value="c3">c3</option>
+<option value="c4">c4</option>
+<option value="c5">c5</option>
+</select>
+
+<label class="lb">c</label><input type="number" name="c" size="2" id="3c">
+<lable>co</lable>
+
+<select id="sel9">
+
+<option value="c1">c1</option>
+<option value="c2">c2</option>
+<option value="c3">c3</option>
+<option value="c4">c4</option>
+<option value="c5">c5</option>
+</select>
+<br><br>
+
+<button type="button" class="sub" onclick="storedata()"> Submit</button>
+<botton type="button"><a href ="c:\mid marks evaluation\p1.html">confirm</a></botton>
+</form>
+</body>
+</html>

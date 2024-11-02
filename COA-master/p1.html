@@ -1,0 +1,245 @@
+<html>
+<head>
+<title>
+</title>
+<style>
+.txt{
+width:50px;
+text-align:center;
+
+}
+input{
+margin:10px;
+}
+.btn1{font-size:20px;
+  visibility: visible;
+text-align:center;
+position:relative;
+left:300px;
+}
+</style>
+
+<script>
+
+
+function calculate()
+ {
+let name=localStorage.getItem("name")
+console.log("name :",name)
+var intered_marks=[]
+
+    intered_marks.push(parseInt(document.getElementById("txt1").value))
+    intered_marks.push(parseInt(document.getElementById("txt2").value))
+    intered_marks.push(parseInt(document.getElementById("txt3").value))
+    intered_marks.push(parseInt(document.getElementById("txt4").value))
+    intered_marks.push(parseInt(document.getElementById("txt5").value))
+    intered_marks.push(parseInt(document.getElementById("txt6").value))
+    intered_marks.push(parseInt(document.getElementById("txt7").value))
+    intered_marks.push(parseInt(document.getElementById("txt8").value))
+    intered_marks.push(parseInt(document.getElementById("txt9").value))
+    intered_marks.push(parseInt(document.getElementById("txt10").value))
+    intered_marks.push(parseInt(document.getElementById("txt11").value))
+    intered_marks.push(parseInt(document.getElementById("txt12").value))
+    intered_marks.push(parseInt(document.getElementById("txt13").value))
+    intered_marks.push(parseInt(document.getElementById("txt14").value))
+    intered_marks.push(parseInt(document.getElementById("txt15").value))
+    intered_marks.push(parseInt(document.getElementById("txt16").value))
+    intered_marks.push(parseInt(document.getElementById("txt17").value))
+    intered_marks.push(parseInt(document.getElementById("txt18").value))
+
+
+let j=0,flag=0,count=0;
+for(let i=3;i<=43;i+=5){
+    
+    if(intered_marks[j]>name[i]){
+        count=1;
+        flag=1;
+    }
+    j++;
+}
+if(flag==0){
+    alert("Marks Entered Successfully");
+}   
+if(count!=0){
+    alert("Marks should not be greater then Maximum")
+} 
+let k=0,c=0,d=0,g=0,h=0,l=0,n=5,x=0,y=0,z=0,t=0,o=0;
+
+for(let i=0;i<2;i++)
+{
+for(let b=1;b<=43;b+=5)
+{
+
+  
+  if(parseInt(name[b])==1)
+  {
+    x++;
+   c+= intered_marks[k];
+  }
+  
+  else if(parseInt(name[b])==2)
+  {
+    y++;
+    d+=intered_marks[k];
+
+  }
+  else if(parseInt(name[b])==3)
+  {
+    z++;
+    g+=intered_marks[k];
+  }
+  else if(parseInt(name[b])==4)
+  {
+    t++;
+    
+    h+=intered_marks[k];
+  }
+  else if(parseInt(name[b])==5)
+  {
+    o++;
+    l+=intered_marks[k];
+  }
+  k++;
+}
+}
+let cal1,cal2,cal3,cal4,cal5;
+let total=x+y+z+t+o;
+
+ cal1=document.getElementById("1").innerHTML=x*100/total;
+ cal2=document.getElementById("2").innerHTML=y*100/total;
+ cal3=document.getElementById("3").innerHTML=z*100/total;
+ cal4=document.getElementById("4").innerHTML=t*100/total;
+ cal5=document.getElementById("5").innerHTML=o*100/total;
+/*const myDictionary={
+  key:cal1,
+  key:cal2,
+  key:cal3,
+  key:cal4,
+  key:cal5,
+
+};*/
+let students=[
+  {co:"c1",percentage:cal1},
+  {co:"c2",percentage:cal2},
+  {co:"c3",percentage:cal3},
+  {co:"c4",percentage:cal4},
+  {co:"c5",percentage:cal5}
+];
+let stu=localStorage.setItem("students");
+console.log("student",stu);
+/*const data=JSON.stringify(urlParams.get(myDictionary));
+
+localStorage.setItem("myDictonary",data);*/
+
+}
+
+    
+    
+
+/*document.write("for c1 total percentage",+x*100/total,"<br>");
+
+document.write("for c2 total percentage ",+y*100/total,"<br>");
+
+doument.write("for c3 total percentage ",+z*100/total,"<br>");
+
+document.write("for c4 total percentage",+t*100/total,"<br>");
+
+document.write("for c5 total percentage",+o*100/total,"<br>");
+document.write("for c1 total count",+x);
+
+document.write("for c2 total count",+y);
+document.write("for c3 total count",+z);
+document.write("for c4 total count",+t);
+document.write("for c5 total count",+o);
+
+
+document.write("total c1,c2,c3,c4,c5",+total);*/
+
+        
+    
+
+</script>
+</head>
+
+<body bgcolor="#EEEEEE">
+
+
+<form id="form1">
+<label>21VV5A0501-</label>
+<label>Ⅰ</label>
+<input type="number" placeholder="a" class="txt" id="txt1"></input>
+<input type="number" placeholder="b" class="txt" id="txt2" ></input>
+<input type="number" placeholder="c" class="txt" id="txt3" ></input>
+<label>Ⅱ</label>
+<input type="number" placeholder="a" class="txt" id="txt4" ></input>
+<input type="number" placeholder="b" class="txt" id="txt5" ></input>
+<input type="number" placeholder="c" class="txt" id="txt6" ></input></td>
+
+<label>Ⅲ</label>
+
+<input type="number" placeholder="a" class="txt" id="txt7"></input>
+<input type="number" placeholder="b" class="txt" id="txt8" ></input>
+<input type="number" placeholder="c" class="txt" id="txt9"></input>
+</tr>
+<br>
+<br>
+<tr>
+<label>21VV5A0502-</label>
+<label>Ⅰ</label>
+<input type="number" placeholder="a" class="txt" id="txt10"></input>
+<input type="number" placeholder="b" class="txt" id="txt11" ></input>
+<input type="number" placeholder="c" class="txt" id="txt12" ></input>
+<label>Ⅱ</label></td>
+<input type="number" placeholder="a" class="txt" id="txt13" ></input>
+<input type="number" placeholder="b" class="txt" id="txt14" ></input>
+<input type="number" placeholder="c" class="txt" id="txt15" ></input>
+
+<label>Ⅲ</label>
+
+<input type="number" placeholder="a" class="txt" id="txt16"></input>
+<input type="number" placeholder="b" class="txt" id="txt17" ></input>
+<input type="number" placeholder="c" class="txt" id="txt18"></input>
+
+<br>
+<br>
+</form>
+<p id="result"></p>
+<p id="res"></p>
+
+<button type="button" class="btn1" onclick="calculate()"> Submit</button>
+<botton type="button"><a href ="c:\mid marks evaluation\p2.html">confirm</a></botton>
+<form>
+
+</form>
+<form>
+<!--table  align="center" border="1" cellspacing="3"bgcolor="white" height="100" width="500"cellpadding="3" id="table">
+  <tr>
+<tr>
+  <th>Course Outcome</th>
+  <th>Percentage</th>
+</tr>
+<tr>
+ <td>C1</td>
+ <td id="1">0</td>
+</tr>
+<tr>
+ <td>C2</td>
+ <td id="2">0</td>
+</tr>
+<tr>
+ <td>C3</td>
+ <td id="3">0</td>
+</tr>
+<tr>
+ <td>C4</td>
+ <td id="4">0</td>
+</tr>
+<tr>
+ <td>C5</td>
+ <td id="5">0</td>
+</tr>
+</table!-->
+</form>
+</form>
+</body>
+</html>
